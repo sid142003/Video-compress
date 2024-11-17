@@ -25,7 +25,7 @@ const UploadForm = () => {
     formData.append('targetSize', targetSize);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/videos/upload', formData);
+      const response = await axios.post('https://video-compress-aaom.onrender.com/api/videos/upload', formData);
       toast.update(toastId, { render: "Video uploaded successfully!", type: "success", isLoading: false, autoClose: 5000 });
     } catch (error) {
       toast.update(toastId, { render: "Failed to upload video.", type: "error", isLoading: false, autoClose: 5000 });

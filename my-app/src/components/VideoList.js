@@ -11,7 +11,7 @@ const VideoList = () => {
     useEffect(() => {
         const fetchVideos = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/videos');
+                const response = await axios.get('https://video-compress-aaom.onrender.com/api/videos');
                 console.log(response.data);
                 setVideos(response.data);
             } catch (error) {
